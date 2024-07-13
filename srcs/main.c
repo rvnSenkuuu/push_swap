@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:43:36 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/12 13:38:55 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/13 20:54:30 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc == 2)
+	{
 		if (!create_stack_split(&stack_a, argv[1]))
 			put_error(ERROR_CREATE);
+	}
 	else
 		create_stack(&stack_a, argc, argv);
 	if (!check_duplication(&stack_a))

@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:48:24 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/12 12:00:45 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/13 20:50:54 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,30 @@
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack	*node;
+	t_stack	*first_a;
+	t_stack	*first_b;
 
 	if (!stack_a || !*stack_a || !stack_b || !*stack_b)
 		return ;
-	node = *stack_b;
-	node->next = *stack_a;
-	*stack_a = node;
+	first_a = *stack_a;
+	first_b = *stack_b;
+	*stack_b = (*stack_b)->next;
+	first_b->next = first_a;
+	*stack_a = first_b;
 	ft_putendl_fd("pa", STDOUT_FILENO);
 }
+
 void	pb(t_stack **stack_b, t_stack **stack_a)
 {
-	t_stack	*node;
+	t_stack	*first_a;
+	t_stack	*first_b;
 
 	if (!stack_a || !*stack_a || !stack_b || !*stack_b)
 		return ;
-	node = *stack_a;
-	node->next = *stack_b;
-	*stack_b = node;
+	first_a = *stack_a;
+	first_b = *stack_b;
+	*stack_a = (*stack_a)->next;
+	first_a->next = first_b;
+	*stack_b = first_a;
 	ft_putendl_fd("pb", STDOUT_FILENO);
 }

@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 14:11:14 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:19:57 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/13 20:54:10 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	stack_add_back(t_stack **stack, t_stack *new_node)
 		return ;
 	if (*stack)
 	{
-		last = get_last_node(stack);
+		last = get_last_node(*stack);
 		last->next = new_node;
 	}
 	else
