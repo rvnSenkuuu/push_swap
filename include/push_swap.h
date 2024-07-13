@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:45:01 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:20:11 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/13 20:55:59 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 # define ERROR_MESSAGE "Error\n"
 # define ERROR_CREATE "Failed to create stack\n"
-
 
 typedef struct s_stack
 {
@@ -45,6 +44,5 @@ int		check_stack_sorted(t_stack *stack);
 int		create_stack_split(t_stack **stack_a, char *argv);
 int		create_stack(t_stack **stack_a, int argc, char **argv);
 t_stack	*get_last_node(t_stack *stack);
-
 
 #endif
