@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_utils.c                                       :+:      :+:    :+:   */
+/*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/12 13:39:16 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 21:37:38 by tkara2           ###   ########.fr       */
+/*   Created: 2024/07/13 22:52:21 by tkara2            #+#    #+#             */
+/*   Updated: 2024/07/13 22:53:12 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	check_stack_sorted(t_stack *stack)
+void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	if (!stack)
-		return (EXIT_FAILURE);
-	while (stack)
-	{
-		if (stack->value > stack->next->value)
-			return (EXIT_SUCCESS);
-		stack = stack->next;
-	}
-	return (EXIT_FAILURE);
-}
-
-int	get_stack_size(t_stack *stack)
-{
-	int	size;
-
-	size = 0;
-	while (stack->next)
-	{
-		size++;
-		stack = stack->next;
-	}
-	return (size);
+	return ;
 }
