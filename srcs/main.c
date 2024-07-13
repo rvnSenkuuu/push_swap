@@ -5,33 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 18:31:16 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 23:34:30 by tkara2           ###   ########.fr       */
+/*   Created: 2024/07/11 10:43:36 by tkara2            #+#    #+#             */
+/*   Updated: 2024/07/12 13:38:55 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+
+#include "../include/push_swap.h"
 
 int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
+	if (argc == 1)
+		return (EXIT_SUCCESS);
+	if (check_input(argc, argv))
+		put_error(ERROR_MESSAGE);
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 2 || (argc == 2 && !argv[1][0]))
-		ft_error();
-	else if (argc == 2)
-		//TODO: Different split ?? argv = ft_split(argv[1], ' ');
-	//TODO: init_stack(&stack_a, argv + 1);
-	if (!stack_is_sorted(&stack_a)) // Does is work?
+	if (argc == 2)
+		if (!create_stack_split(&stack_a, argv[1]))
+			put_error(ERROR_CREATE);
+	else
+		create_stack(&stack_a, argc, argv);
+	if (!check_duplication(&stack_a))
 	{
-		if (stack_len(&stack_a) == 2)
-			//TODO: inst_sa(&stack_a);
-		else if (stack_len(&stack_a) == 3)
-			//TODO: sort_three(&stack_a);
-		else
-			//TODO:turk_sort(&stack_a, &stack_b);
+		destroy_stack(&stack_a);
+		destroy_stack(&stack_b);
+		put_error(ERROR_MESSAGE);
 	}
-	free_stack(&stack_a); // Does is work?
+	sort_stack(&stack_a, &stack_b);
+	destroy_stack(&stack_a);
+	destroy_stack(&stack_b);
 	return (EXIT_SUCCESS);
 }

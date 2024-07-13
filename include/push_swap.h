@@ -5,34 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 18:32:14 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/16 23:35:09 by tkara2           ###   ########.fr       */
+/*   Created: 2024/07/11 10:45:01 by tkara2            #+#    #+#             */
+/*   Updated: 2024/07/13 20:20:11 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H 
 
-# include <stdbool.h>
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
 # include "../lib/libft/includes/libft.h"
+# include <limits.h>
+
+# define ERROR_MESSAGE "Error\n"
+# define ERROR_CREATE "Failed to create stack\n"
+
 
 typedef struct s_stack
 {
-	bool	cheapest;
-	bool	above_median;
-	int		value;
-	int		index;
-	int		push_cost;
-	struct s_stack	*target;
+	int				value;
+	int				index;
 	struct s_stack	*next;
-	struct s_stack	*prev;
-}				t_stack;
+}			t_stack;
 
-void	ft_error(void);
-void	init_stack(t_stack *stack, char **argv);
-void	stack_three(t_stack *stack);
-void	turk_sort(t_stack *stack_a, t_stack *stack_b);
-void	free_stack(t_stack *stack);
-bool	stack_is_sorted(t_stack *stack);
-int		stack_len(t_stack *stack);
+void	free_ptrs(void **ptrs);
+void	destroy_stack(t_stack **stack);
+void	put_error(char *error_str);
+void	sa(t_stack **stack_a);
+void	sb(t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_b, t_stack **stack_a);
+void	ra(t_stack **stack_a);
+void	rra(t_stack **stack_a);
+void	rrb(t_stack **stack_b);
+void	rrr(t_stack **stack_a, t_stack **stack_b);
+int		check_input(int argc, char **argv);
+int		check_duplication(t_stack **stack);
+int		check_stack_sorted(t_stack *stack);
+int		create_stack_split(t_stack **stack_a, char *argv);
+int		create_stack(t_stack **stack_a, int argc, char **argv);
+t_stack	*get_last_node(t_stack *stack);
 
-#endif 
+
+#endif

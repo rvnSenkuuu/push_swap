@@ -6,18 +6,13 @@
 #    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/16 18:20:44 by tkara2            #+#    #+#              #
-#    Updated: 2024/06/16 23:10:45 by tkara2           ###   ########.fr        #
+#    Updated: 2024/07/11 11:09:24 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
 
 SRCS_FILES	=	main.c \
-				ft_error.c \
-				ft_utils.c \
-				swap_instruction.c \
-				push_instruction.c \
-				rotate_instruction.c \
 
 INC_FILE	=	push_swap.h
 

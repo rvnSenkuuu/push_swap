@@ -6,7 +6,7 @@
 #    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/10 17:59:47 by tkara2            #+#    #+#              #
-#    Updated: 2024/06/21 00:31:30 by tkara2           ###   ########.fr        #
+#    Updated: 2024/06/22 12:50:41 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/string/ft_strmapi.c \
 							srcs/string/ft_striteri.c \
 							srcs/stdlib/ft_atoi.c \
+							srcs/stdlib/ft_atol.c \
 							srcs/stdlib/ft_itoa.c \
 							srcs/stdlib/get_next_line.c \
 							srcs/stdio/ft_putchar_fd.c \
@@ -54,15 +55,15 @@ SRCS					=	srcs/ctype/ft_isalpha.c \
 							srcs/memory/ft_memmove.c \
 							srcs/memory/ft_calloc.c \
 							srcs/memory/ft_free_doubletab.c \
-							srcs/list/ft_lstnew.c \
-							srcs/list/ft_lstadd_front.c \
-							srcs/list/ft_lstadd_back.c \
-							srcs/list/ft_lstsize.c \
-							srcs/list/ft_lstlast.c \
-							srcs/list/ft_lstdelone.c \
-							srcs/list/ft_lstclear.c \
-							srcs/list/ft_lstiter.c \
-							srcs/list/ft_lstmap.c \
+							srcs/list/ft_lstnew_bonus.c \
+							srcs/list/ft_lstadd_front_bonus.c \
+							srcs/list/ft_lstadd_back_bonus.c \
+							srcs/list/ft_lstsize_bonus.c \
+							srcs/list/ft_lstlast_bonus.c \
+							srcs/list/ft_lstdelone_bonus.c \
+							srcs/list/ft_lstclear_bonus.c \
+							srcs/list/ft_lstiter_bonus.c \
+							srcs/list/ft_lstmap_bonus.c \
 
 OBJDIR					=	.objs
 OBJS					=	$(addprefix ${OBJDIR}/,${SRCS:.c=.o})
