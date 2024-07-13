@@ -6,13 +6,25 @@
 #    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/16 18:20:44 by tkara2            #+#    #+#              #
-#    Updated: 2024/07/11 11:09:24 by tkara2           ###   ########.fr        #
+#    Updated: 2024/07/13 23:08:17 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	push_swap
 
 SRCS_FILES	=	main.c \
+				check_input.c \
+				error.c \
+				create_stack.c \
+				free_utils.c \
+				push_instruction.c \
+				rotate_instruction.c \
+				rrotate_instruction.c \
+				swap_instruction.c \
+				sort_stack.c \
+				radix_sort.c \
+				sort_utils.c \
+				stack_utils.c \
 
 INC_FILE	=	push_swap.h
 
