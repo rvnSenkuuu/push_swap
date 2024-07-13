@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:43:36 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:54:30 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/13 20:57:16 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,5 @@ int	main(int argc, char **argv)
 		put_error(ERROR_MESSAGE);
 	}
 	sort_stack(&stack_a, &stack_b);
-	destroy_stack(&stack_a);
-	destroy_stack(&stack_b);
-	return (EXIT_SUCCESS);
+	return (destroy_stack(&stack_a), destroy_stack(&stack_b), EXIT_SUCCESS);
 }
