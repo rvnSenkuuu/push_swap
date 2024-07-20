@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 12:01:39 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:18:07 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 15:32:49 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ra(t_stack **stack_a)
 {
 	t_stack	*first;
 	t_stack	*last;
-	
+
 	if (!stack_a || !*stack_a)
 		return ;
 	first = *stack_a;

@@ -6,13 +6,13 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:09:04 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:42:35 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 15:33:00 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static t_stack *get_prelast_node(t_stack *stack)
+static t_stack	*get_prelast_node(t_stack *stack)
 {
 	if (!stack)
 		return (NULL);

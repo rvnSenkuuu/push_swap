@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:43:36 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:57:16 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/15 15:10:25 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,21 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 
-	if (argc == 1)
-		return (EXIT_SUCCESS);
-	if (check_input(argc, argv))
+	if (argc == 1 || (argc == 2 && !argv[1][0]))
+		put_error(ERROR_MESSAGE);
+	if (check_args(argc, argv) == EXIT_FAILURE)
 		put_error(ERROR_MESSAGE);
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc == 2)
-	{
-		if (!create_stack_split(&stack_a, argv[1]))
-			put_error(ERROR_CREATE);
-	}
-	else
-		create_stack(&stack_a, argc, argv);
-	if (!check_duplication(&stack_a))
+	create_stack(&stack_a, argc, argv);
+	if (check_stack_sorted(stack_a))
 	{
 		destroy_stack(&stack_a);
 		destroy_stack(&stack_b);
-		put_error(ERROR_MESSAGE);
+		return (EXIT_SUCCESS);
 	}
 	sort_stack(&stack_a, &stack_b);
-	return (destroy_stack(&stack_a), destroy_stack(&stack_b), EXIT_SUCCESS);
+	destroy_stack(&stack_a);
+	destroy_stack(&stack_b);
+	return (EXIT_SUCCESS);
 }

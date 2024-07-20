@@ -6,7 +6,7 @@
 #    By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/16 18:20:44 by tkara2            #+#    #+#              #
-#    Updated: 2024/07/13 23:08:17 by tkara2           ###   ########.fr        #
+#    Updated: 2024/07/15 11:25:45 by tkara2           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ OBJS		=	$(addprefix $(OBJS_PATH), $(SRCS:.c=.o))
 INC			=	$(addprefix $(INC_PATH), $(INC_FILE))
 
 CC		=	cc
-CFLAGS	=	-Wall -Werror -Wextra -I$(INC_PATH) -I$(LIBFT_PATH)
+CFLAGS	=	-Wall -Werror -Wextra -I$(INC_PATH) -I$(LIBFT_PATH) -g3
 LFLAGS	=	-L$(LIBFT_PATH) -lft
 RM		=	rm -rf
 

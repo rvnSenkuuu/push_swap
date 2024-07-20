@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 11:56:34 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/12 11:25:39 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 15:32:27 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	free_ptrs(void **ptrs)
 	free(ptrs);
 	ptrs = NULL;
 }
+
 void	destroy_stack(t_stack **stack)
 {
 	t_stack	*current;

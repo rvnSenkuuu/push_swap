@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   simple_sort.c                                      :+:      :+:    :+:   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 21:39:10 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 23:05:56 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:35:26 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	sort_three(t_stack **stack)
 		ra(stack);
 	}
 	else if (first < second && second > third && first > third)
-		ra(stack);
+		rra(stack);
 }
 
 void	sort_four(t_stack **stack_a, t_stack **stack_b)
@@ -50,7 +50,7 @@ void	sort_four(t_stack **stack_a, t_stack **stack_b)
 	min_index = get_min_index(*stack_a);
 	while ((*stack_a)->index != min_index)
 		ra(stack_a);
-	pb(stack_a, stack_b);
+	pb(stack_b, stack_a);
 	sort_three(stack_a);
 	pa(stack_a, stack_b);
 }
@@ -64,7 +64,7 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 	min_index = get_min_index(*stack_a);
 	while ((*stack_a)->index != min_index)
 		ra(stack_a);
-	pb(stack_a, stack_b);
+	pb(stack_b, stack_a);
 	sort_four(stack_a, stack_b);
 	pa(stack_a, stack_b);
 }
@@ -90,8 +90,6 @@ void	simple_sort(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_stack(t_stack **stack_a, t_stack **stack_b)
 {
-	if (check_stack_sorted(*stack_a))
-		return ;
 	if (get_stack_size(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);
 	else

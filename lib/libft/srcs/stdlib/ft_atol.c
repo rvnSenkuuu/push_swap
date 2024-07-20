@@ -6,14 +6,15 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:41:04 by tkara2            #+#    #+#             */
-/*   Updated: 2024/06/30 22:45:20 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/15 11:52:29 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../../includes/libft.h"
 
 static	int	ft_isspace(char c)
 {
-	return (c == ' ' || (c >= '\t' && c <= '\r' ));
+	return (c == ' ' || (c >= '\t' && c <= '\r'));
 }
 
 long	ft_atol(const char *nptr)

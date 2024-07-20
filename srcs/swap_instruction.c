@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:39:53 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 19:59:48 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 15:33:47 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sa(t_stack **stack_a)
 {
 	int		tmp_value;
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!stack_a || !*stack_a)
 		return ;

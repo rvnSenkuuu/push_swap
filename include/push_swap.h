@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 10:45:01 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 22:53:25 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/15 13:21:58 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_stack
 
 void	free_ptrs(void **ptrs);
 void	destroy_stack(t_stack **stack);
-void	set_stack_index(t_stack *stack);
+void	set_stack_index(t_stack **stack);
 void	simple_sort(t_stack **stack_a, t_stack **stack_b);
 void	sort_stack(t_stack **stack_a, t_stack **stack_b);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
@@ -42,8 +42,7 @@ void	ra(t_stack **stack_a);
 void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
-int		check_input(int argc, char **argv);
-int		check_duplication(t_stack **stack);
+int		check_args(int argc, char **argv);
 int		check_stack_sorted(t_stack *stack);
 int		get_stack_size(t_stack *stack);
 int		get_min_value(t_stack *stack);

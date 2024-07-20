@@ -6,7 +6,7 @@
 /*   By: tkara2 <tkara2@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 11:48:24 by tkara2            #+#    #+#             */
-/*   Updated: 2024/07/13 20:50:54 by tkara2           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:38:53 by tkara2           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	t_stack	*first_a;
 	t_stack	*first_b;
 
-	if (!stack_a || !*stack_a || !stack_b || !*stack_b)
+	if (!stack_a || !*stack_a || !stack_b)
 		return ;
 	first_a = *stack_a;
 	first_b = *stack_b;
@@ -32,7 +32,7 @@ void	pb(t_stack **stack_b, t_stack **stack_a)
 	t_stack	*first_a;
 	t_stack	*first_b;
 
-	if (!stack_a || !*stack_a || !stack_b || !*stack_b)
+	if (!stack_a || !*stack_a || !stack_b)
 		return ;
 	first_a = *stack_a;
 	first_b = *stack_b;
